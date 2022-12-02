@@ -1,0 +1,67 @@
+:root {
+    --accent: #D84F39;
+    --blueish: #9ECDE6;
+}
+
+body {
+    background-color: var(--blueish);
+    width:100vw;
+    height:100vh;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu {
+    position:fixed;
+    top: 6vh;
+    left: 4vw;
+    z-index:10;
+}
+
+#menu img {
+    width:7vw;
+}
+
+canvas {
+    text-align: center;
+    height:120vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#foreGrain, #backGrain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#foreGrain {
+    mix-blend-mode: multiply;
+    z-index:10;
+}
+
+#backGrain {
+    mix-blend-mode: overlay;
+    z-index:-2;
+}
+
+#grain {
+    width:100vw;
+    height:100vh;
+}
+
+#videoBackground {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index:-4;
+}

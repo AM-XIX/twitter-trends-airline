@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Trends Airline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+    <svg id="foreGrain" viewBox="0 0 200 200" xmlns='http://www.w3.org/2000/svg'>
+        <filter id='noiseFilter'>
+          <feTurbulence 
+            type='fractalNoise' 
+            baseFrequency='4' 
+            numOctaves='3' 
+            stitchTiles='stitch' />
+        </filter>
+      
+        <rect id="grain" filter='url(#noiseFilter)' />
+      </svg>
+
+      <svg id="backGrain" viewBox="0 0 200 200" xmlns='http://www.w3.org/2000/svg'>
+        <filter id='noiseFilter'>
+          <feTurbulence 
+            type='fractalNoise' 
+            baseFrequency='.2' 
+            numOctaves='100' 
+            stitchTiles='stitch' />
+        </filter>
+      
+        <rect id="grain" filter='url(#noiseFilter)' />
+      </svg>
+    <video autoplay muted loop id="videoBackground">
+        <source src="assets/blueSky.mp4" type="video/mp4">
+    </video>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
